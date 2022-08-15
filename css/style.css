@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,500&display=swap');
+
+*, ::before , ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family:  'Montserrat', sans-serif;
+    background: #f4f4f4;
+}
+/* nav */
+nav{
+    position: fixed;
+    padding: 15px 25px;
+    width: 100%;
+    display: flex;
+    padding: 15px 25px;
+    align-items: center;
+    background: #fafafa78;
+    box-shadow: inset 0px -1px 0px #c5c5c6;
+}
+.nav-icon{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    margin-right: 20px;
+}
+.nav-icon span{
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 25px;
+    margin-left: 10px;
+    font-weight: 300;
+    color: #333;
+}
+.nav-icon img{
+    width: 40px;
+    transform: rotate(-17deg) translateX(5px);
+}
+.hamburger{
+    display: none;
+}
+.navlinks-container a{
+    font-family: 'Roboto Flex', sans-serif;
+    margin: 0 10px;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    color: #414141;
+    display: inline-block;
+    position: relative;
+}
+.navlinks-container a::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    transform: scaleX(0);
+    transform-origin: left;
+    background: #333;
+    transition: transform 0.3s ease-out;
+
+}
+.navlinks-container a:hover::after{
+    transform: scaleX(1);
+}
+.nav-authentication{
+    margin-left: auto;
+
+}
+.sign-btns button{
+    font-family: 'Roboto Flex', sans-serif;
+    font-size: 16px;
+    min-width: 90px;
+    padding: 10px 5px;
+    margin: 0 5px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+.sign-btns button:nth-child(2){
+    border: none;
+    background: rgba(77, 165, 236, 0.7);
+}
+.sign-user{
+    display: none;
+}
+/* header */
+header{
+    width: 100%;
+    height: 50vh;
+    align-items: center;
+    background:  linear-gradient(rgba(241, 166, 96, 0.6), rgba(1, 87, 90, 0.7)),url("../public/bgheadermecamarine.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    
+}
+.header-title{
+   font-size: 20px;
+}
+.container{
+    padding: 25px;
+}
+section{
+    padding-top: 10px;
+}
+section h1{
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Roboto Flex', sans-serif;
+    padding-bottom: 10px;
+}
+.card-container{
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(2, 22, 87);
+    color: white;
+}
+.card-container .card{
+    flex-grow: 1;
+    align-items: center;
+    
+   
+}
+.card-container .card h2{
+    text-align: center;
+    padding-top: 3em;
+    
+}
+.card-container .card p{
+    text-align: center;
+}
+.card-container .card:nth-child(1){
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(153, 153, 152, 0.6), rgba(1, 87, 90, 0.7)),url("../public/engine-g3153bf841_1920.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+.card-container .card:nth-child(2){
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(153, 153, 152, 0.6), rgba(1, 87, 90, 0.7)),url("../public/halyard-gccc13a36b_1920.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.card-container .card:nth-child(3){
+    width: 100%;
+    height: auto;
+    background: linear-gradient(rgba(153, 153, 152, 0.6), rgba(1, 87, 90, 0.7)),url("../public/sailboat-g59025bed4_1920.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+footer{
+    width: 100%;
+    height: 50px;
+    background: #0a3d62;
+    color: #f4f4f4;
+    text-align: center;
+    bottom:0;
+}
+footer a{
+    text-decoration: none;
+    color:#82ccdd;
+}
+.article{
+    padding-top: 140px;
+    width: 100%;
+    height: 300px;
+    text-align: center;
+}
+img{
+    width: 20px;
+}
+@media (max-width: 900px){
+    nav {
+        padding: 15px 20px;
+        position: relative;
+    }
+    .nav-icon{
+        order: 2;
+        margin: 0 auto;
+
+    }
+    .nav-icon span{
+        font-size: 22px;
+    }
+
+    .main-navlinks{
+        order:1;
+    }
+    /* hamburger */
+    .hamburger{
+        width: 20px;
+        height: 20px;
+        cursor: pointer;
+        border: none;
+        display: flex;
+        background: #fafafa;
+        align-items: center;
+        position: relative;
+    }
+    .hamburger span{
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: #333;
+        position: absolute;
+        pointer-events: none;
+        transition: opacity 0.3s 0.15s ease-out;
+    }
+    .hamburger span:nth-child(1), 
+    .hamburger span:nth-child(3){
+        transition: transform 0.3s ease-out;
+    }
+    .hamburger span:nth-child(1){
+        transform: translateY(7px);
+    }
+    .hamburger span:nth-child(3){
+        transform: translateY(-7px);
+    }
+    .hamburger.open span:nth-child(1){
+        transform: translate(0) rotate(135deg);
+    }
+    .hamburger.open span:nth-child(2){
+        opacity: 0;
+        transition: opacity 0s ease-out;
+    }
+    .hamburger.open span:nth-child(3){
+        transform: translate(0) rotate(-135deg);
+    }
+    .navlinks-container{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        background: #fafafa;
+        top: 100%;
+        left: 0;
+        height: 100vh;
+        padding: 15px 50px 15px 20px;
+        border-right: 1px solid #c5c5c6;
+        transform: translate(-100%);
+        /* transition: transform 0.3s ease-out; */
+    }
+    .nav-authentication{
+        order: 3;
+        margin-left: 0;
+    }
+    .open{
+        transform: translate(0%);
+    }
+    .navlinks-container a{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .sign-btns{
+        display: none;
+    }
+    .sign-user{
+        display: block;
+        cursor: pointer;
+        border: none;
+    }
+    .sign-user img{
+        width: 20px;
+    }
+    header{
+        height: 25vh;
+    }
+    .card-container{
+        flex-direction: column;
+        height: 500px;
+    }
+    .card h2{
+        padding-top: 2em;
+    }
+ 
+}
+@media(max-width:500px){
+    .nav-icon{
+        width: 30px;
+    }
+    .nav-icon span{
+        font-size:20px;
+    }
+
+}
