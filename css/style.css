@@ -197,6 +197,9 @@ footer{
     text-align: center;
     bottom:0;
 }
+footer p {
+    padding-top: 10px;
+}
 footer a{
     text-decoration: none;
     color:#82ccdd;
